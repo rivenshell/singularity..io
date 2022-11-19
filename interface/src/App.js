@@ -128,8 +128,16 @@ const App = ({ classes }) => {
     return (
         <div className={classes.root}>
             <div className={classes.title}>
-                <Typography variant="h4">
-                 Singularity.io 
+
+                <Typography variant="h3">
+                 Singularity
+                </Typography>
+                <Typography variant="p">
+                A playground for DALL-E enthusiasts to tinker with the open-source version 
+                </Typography>
+
+                <Typography>
+                of OpenAI's DALL-E, based on DALL-E Mini.
                 </Typography>
             </div>
 
