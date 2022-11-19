@@ -8,7 +8,7 @@ body {
 
 #root {
     min-height: 100vh;
-    background-color: #f6f6ef;
+    background-color: white;
     display: flex;
     flex-direction: row;
 }
