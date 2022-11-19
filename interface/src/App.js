@@ -110,6 +110,8 @@ const App = ({ classes }) => {
         })
     }
 
+    // Lets do this
+
     function getGalleryContent() {
         if (apiError) {
             return <Typography variant="h5" color="error">{apiError}</Typography>
