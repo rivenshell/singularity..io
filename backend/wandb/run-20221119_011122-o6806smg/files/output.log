@@ -1,0 +1,47 @@
+WARNING:jax._src.lib.xla_bridge:No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/lift.py:112: FutureWarning: jax.tree_flatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_flatten instead.
+  scopes, treedef = jax.tree_flatten(scope_tree)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/lift.py:724: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  lengths = set(jax.tree_leaves(lengths))
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/axes_scan.py:131: FutureWarning: jax.tree_flatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_flatten instead.
+  in_avals, in_tree = jax.tree_flatten(input_avals)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/linen/transforms.py:247: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  jax.tree_leaves(tree)))
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/axes_scan.py:143: FutureWarning: jax.tree_unflatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_unflatten instead.
+  broadcast_in, constants_out = jax.tree_unflatten(out_tree(), out_flat)
+Downloading: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 434/434 [00:00<00:00, 287kB/s]
+
+
+
+Downloading: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 304M/304M [00:05<00:00, 51.4MB/s]
+Downloading: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 34.2M/34.2M [00:00<00:00, 44.0MB/s]
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/scope.py:740: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  abs_value_flat = jax.tree_leaves(abs_value)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/scope.py:741: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  value_flat = jax.tree_leaves(value)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/scope.py:740: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  abs_value_flat = jax.tree_leaves(abs_value)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/scope.py:741: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  value_flat = jax.tree_leaves(value)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/lift.py:112: FutureWarning: jax.tree_flatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_flatten instead.
+  scopes, treedef = jax.tree_flatten(scope_tree)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/lift.py:724: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  lengths = set(jax.tree_leaves(lengths))
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/axes_scan.py:131: FutureWarning: jax.tree_flatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_flatten instead.
+  in_avals, in_tree = jax.tree_flatten(input_avals)
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/linen/transforms.py:247: FutureWarning: jax.tree_leaves is deprecated, and will be removed in a future release. Use jax.tree_util.tree_leaves instead.
+  jax.tree_leaves(tree)))
+/workspace/.pyenv_mirror/user/current/lib/python3.8/site-packages/flax/core/axes_scan.py:143: FutureWarning: jax.tree_unflatten is deprecated, and will be removed in a future release. Use jax.tree_util.tree_unflatten instead.
+  broadcast_in, constants_out = jax.tree_unflatten(out_tree(), out_flat)
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.5.2:8080
+INFO:werkzeug:[33mPress CTRL+C to quit
+--> DALL-E Server is up and running!
+--> Model selected - DALL-E ModelSize.MINI
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+[31m   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off

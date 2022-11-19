@@ -1,0 +1,122 @@
+{
+    "os": "Linux-5.15.0-47-generic-x86_64-with-glibc2.29",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-11-19T01:11:23.021991",
+    "startedAt": "2022-11-19T01:11:22.547690",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--port",
+        "8080",
+        "--model_version",
+        "mini"
+    ],
+    "state": "running",
+    "program": "app.py",
+    "codePath": "backend/app.py",
+    "git": {
+        "remote": "https://github.com/saharmor/dalle-playground.git",
+        "commit": "ff2ee5f415ec6cae97b22c3363547216fb00431e"
+    },
+    "email": "rivenshell111@gmail.com",
+    "root": "/workspace/dalle-playground",
+    "host": "saharmor-dalleplaygroun-3j7sehwgjz5",
+    "username": "gitpod",
+    "executable": "/home/gitpod/.pyenv/versions/3.8.13/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2449.998,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2449.998,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 1399.9760780334473,
+        "used": 200.5916976928711
+    },
+    "memory": {
+        "total": 62.80344009399414
+    }
+}

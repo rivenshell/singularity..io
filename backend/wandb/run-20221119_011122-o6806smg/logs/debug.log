@@ -1,0 +1,27 @@
+2022-11-19 01:11:22,549 INFO    MainThread:1520 [wandb_setup.py:_flush():68] Configure stats pid to 1520
+2022-11-19 01:11:22,549 INFO    MainThread:1520 [wandb_setup.py:_flush():68] Loading settings from /home/gitpod/.config/wandb/settings
+2022-11-19 01:11:22,549 INFO    MainThread:1520 [wandb_setup.py:_flush():68] Loading settings from /workspace/dalle-playground/backend/wandb/settings
+2022-11-19 01:11:22,549 INFO    MainThread:1520 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'silent': 'true'}
+2022-11-19 01:11:22,549 INFO    MainThread:1520 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'backend/app.py', 'program': 'app.py'}
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_setup.py:_flush():68] Applying login settings: {'anonymous': 'must'}
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_setup.py:_flush():68] [34m[1mwandb[0m: Appending key for api.wandb.ai to your netrc file: /home/gitpod/.netrc
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_setup.py:_flush():68] Applying login settings: {'api_key': '***REDACTED***'}
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_init.py:_log_setup():476] Logging user logs to /workspace/dalle-playground/backend/wandb/run-20221119_011122-o6806smg/logs/debug.log
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_init.py:_log_setup():477] Logging internal logs to /workspace/dalle-playground/backend/wandb/run-20221119_011122-o6806smg/logs/debug-internal.log
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_init.py:init():516] calling init triggers
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_init.py:init():569] starting backend
+2022-11-19 01:11:22,550 INFO    MainThread:1520 [wandb_init.py:init():573] setting up manager
+2022-11-19 01:11:22,552 INFO    MainThread:1520 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-11-19 01:11:22,554 INFO    MainThread:1520 [wandb_init.py:init():580] backend started and connected
+2022-11-19 01:11:22,556 INFO    MainThread:1520 [wandb_init.py:init():658] updated telemetry
+2022-11-19 01:11:22,574 INFO    MainThread:1520 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2022-11-19 01:11:22,926 INFO    MainThread:1520 [wandb_run.py:_on_init():2000] communicating current version
+2022-11-19 01:11:23,001 INFO    MainThread:1520 [wandb_run.py:_on_init():2004] got version response 
+2022-11-19 01:11:23,001 INFO    MainThread:1520 [wandb_init.py:init():728] starting run threads in backend
+2022-11-19 01:11:23,047 INFO    MainThread:1520 [wandb_run.py:_console_start():1980] atexit reg
+2022-11-19 01:11:23,047 INFO    MainThread:1520 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2022-11-19 01:11:23,048 INFO    MainThread:1520 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2022-11-19 01:11:23,048 INFO    MainThread:1520 [wandb_run.py:_redirect():1925] Redirects installed.
+2022-11-19 01:11:23,049 INFO    MainThread:1520 [wandb_init.py:init():765] run started, returning control to user process
