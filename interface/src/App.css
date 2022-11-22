@@ -8,8 +8,15 @@ body {
 
 #root {
     min-height: 100vh;
-    background-color: #f6f6ef;
-    display: flex;
-    flex-direction: row;
+    background-color: white;
+    /* display: flex;
+    flex-direction: row; */
 }
+.cover{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+margin-top: 10%;
+};
 

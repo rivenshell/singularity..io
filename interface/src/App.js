@@ -12,6 +12,7 @@ import "./App.css";
 import BackendUrlInput from "./BackendUrlInput";
 import LoadingSpinner from "./LoadingSpinner";
 import NotificationCheckbox from './NotificationCheckbox';
+import title from "../src/img/google.jpg"
 
 const useStyles = () => ({
     root: {
@@ -124,11 +125,11 @@ const App = ({ classes }) => {
 
 
     return (
-        <div className={classes.root}>
+       
+       <div className={classes.root}>
+            
             <div className={classes.title}>
-                <Typography variant="h3">
-                    DALL-E Playground <span role="img" aria-label="sparks-emoji">✨</span>
-                </Typography>
+                <img className="cover" src={title} />
             </div>
 
             {!validBackendUrl && <div>
