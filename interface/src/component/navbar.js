@@ -9,12 +9,13 @@ export const Navbar = () => {
 			<div className="container-fluid ">
 				<Link className="navbar-brand" to="/">
 					<img src={blue} width="50" height="50" className="d-inline-block align-text-top" />
+					<p className="logo-title">Singularity</p>
 				</Link>
 
 				<div className="d-flex" role="search">
 
 					<Link to="/demo">
-						<button className="btn btn-primary">Login</button>
+						<button className="btn btn-primary nav-login">Login</button>
 					</Link>
 				</div>
 			</div>

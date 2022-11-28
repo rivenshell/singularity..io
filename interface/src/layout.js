@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App.js";
-//import { Demo } from "./views/demo";
+import { Demo } from "./views/demo";
 //import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -22,14 +22,13 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route exact path="/" element={ <App />}>
-						
+						</Route>
+						<Route exact path="/demo" element={ <Demo />}>
 						</Route>
                         </Routes>
                     <Footer />
                         {/*
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
+						
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
