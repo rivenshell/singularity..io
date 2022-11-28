@@ -12,6 +12,7 @@ import "./App.css";
 import BackendUrlInput from "./BackendUrlInput";
 import LoadingSpinner from "./LoadingSpinner";
 import NotificationCheckbox from './NotificationCheckbox';
+import title from "../src/img/google.jpg"
 
 const useStyles = () => ({
     root: {
@@ -126,8 +127,13 @@ const App = ({ classes }) => {
 
 
     return (
-        <div className={classes.root}>
+       
+       <div className={classes.root}>
+            
             <div className={classes.title}>
+
+                <img className="cover" src={title} />
+
 
                 <Typography variant="h3">
                  Singularity
@@ -139,6 +145,7 @@ const App = ({ classes }) => {
                 <Typography>
                 of OpenAI's DALL-E, based on DALL-E Mini.
                 </Typography>
+
             </div>
 
             {!validBackendUrl && <div>
