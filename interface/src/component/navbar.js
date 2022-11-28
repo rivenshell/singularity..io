@@ -8,7 +8,7 @@ export const Navbar = () => {
 		<nav className="navbar ">
 			<div className="container-fluid ">
 				<Link className="navbar-brand" to="/">
-					<img src={blue} width="50" height="50" className="d-inline-block align-text-top" />
+					<img src={blue} width="50" height="50" className="d-inline-block align-text-top nav-logo" />
 					<p className="logo-title">Singularity</p>
 				</Link>
 

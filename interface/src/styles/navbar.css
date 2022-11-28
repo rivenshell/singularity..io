@@ -32,4 +32,6 @@
     /* font-size: larger; */ 
     color: white;
   }
- 
+ .nav-logo{
+  border-radius: 10px;
+ }
