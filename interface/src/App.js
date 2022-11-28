@@ -111,6 +111,8 @@ const App = ({ classes }) => {
         })
     }
 
+    // Lets do this
+
     function getGalleryContent() {
         if (apiError) {
             return <Typography variant="h5" color="error">{apiError}</Typography>
@@ -129,7 +131,21 @@ const App = ({ classes }) => {
        <div className={classes.root}>
             
             <div className={classes.title}>
+
                 <img className="cover" src={title} />
+
+
+                <Typography variant="h3">
+                 Singularity
+                </Typography>
+                <Typography variant="p">
+                A playground for DALL-E enthusiasts to tinker with the open-source version 
+                </Typography>
+
+                <Typography>
+                of OpenAI's DALL-E, based on DALL-E Mini.
+                </Typography>
+
             </div>
 
             {!validBackendUrl && <div>
