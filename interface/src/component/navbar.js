@@ -15,7 +15,7 @@ export const Navbar = () => {
 				<div className="d-flex" role="search">
 
 					<Link to="/demo">
-						<button className="btn btn-primary nav-login">Login</button>
+						<button className="btn nav-login">Login</button>
 					</Link>
 				</div>
 			</div>

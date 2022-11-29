@@ -133,26 +133,7 @@ const App = ({ classes }) => {
             <div className={classes.title}>
 
                 <img className="cover" src={title} />
-
-
-                <Typography variant="h3">
-                 Singularity
-                </Typography>
-                <Typography variant="p">
-                A playground for DALL-E enthusiasts to tinker with the open-source version 
-                </Typography>
-
-                <Typography>
-                of OpenAI's DALL-E, based on DALL-E Mini.
-                </Typography>
-
             </div>
-
-            {!validBackendUrl && <div>
-                <Typography variant="body1" color="textSecondary">
-                    Put your DALL-E backend URL to start
-                </Typography>
-            </div>}
 
             <div className={classes.playgroundSection}>
                 <div className={classes.settingsSection}>
