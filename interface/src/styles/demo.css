@@ -149,3 +149,32 @@ label {
     padding: 0px;
    
 }
+.upsign
+{
+    background-color: #090909;
+}
+.modal-header
+{ background-image: linear-gradient(to right, #0b0b0b, #0040ff);
+    background-image: -o-linear-gradient(right, #0f0f10, #0040ff);
+    background-image: -moz-linear-gradient(right, #0c0c0c, #1f40a3);
+    background-image: -webkit-linear-gradient(left, #131314, #1639a0);
+    background-blend-mode: multiply;
+    color: white;
+}
+.modal-body
+{ background-image: linear-gradient(to right, #0b0b0b, #0040ff);
+    background-image: -o-linear-gradient(right, #0f0f10, #0040ff);
+    background-image: -moz-linear-gradient(right, #0c0c0c, #1f40a3);
+    background-image: -webkit-linear-gradient(left, #131314, #1639a0);
+    background-blend-mode: multiply;
+    color: white;
+    text-align: left;
+}
+.modal-footer
+{ background-image: linear-gradient(to right, #0b0b0b, #0040ff);
+    background-image: -o-linear-gradient(right, #0f0f10, #0040ff);
+    background-image: -moz-linear-gradient(right, #0c0c0c, #1f40a3);
+    background-image: -webkit-linear-gradient(left, #131314, #1639a0);
+    background-blend-mode: multiply;
+    color: white;
+}
