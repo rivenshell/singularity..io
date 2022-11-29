@@ -125,6 +125,7 @@ label {
 
 .login-btm {
   margin-left: auto;
+  padding: 5%;
     
     
 }
@@ -135,9 +136,16 @@ label {
     margin-bottom: 25px;
     font-family: 'Orbitron';
 }
-
+.signup-button {
+        
+        padding-right: 0px;
+        text-align: right;
+        margin-bottom: 25px;
+        font-family: 'Orbitron';
+    
+}
 
 .loginbttm {
     padding: 0px;
-    
+   
 }
