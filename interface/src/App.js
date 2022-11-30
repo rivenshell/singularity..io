@@ -14,6 +14,7 @@ import LoadingSpinner from "./LoadingSpinner";
 import NotificationCheckbox from './NotificationCheckbox';
 import title from "../src/img/google.jpg"
 
+
 const useStyles = () => ({
     root: {
         display: 'flex',
@@ -180,11 +181,6 @@ const App = ({ classes }) => {
                         {getGalleryContent()}
                     </div>
                 }
-            </div>
-            <div className='container-fluid'>
-
-
-
             </div>
         </div>
     )
