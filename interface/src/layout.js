@@ -27,7 +27,7 @@ const Layout = () => {
 						<Route exact path="/demo" element={ <Demo />}>
 						</Route>
                         </Routes>
-						<Pics />
+						
                     <Footer />
                         {/*
 						
