@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App.js";
 import { Demo } from "./views/demo";
+import Signup from "./views/signup";
 //import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -26,6 +27,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/demo" element={ <Demo />}>
 						</Route>
+						<Route exact path="/signup" element={ <Signup />}>
+						</Route>
+
                         </Routes>
 						
                     <Footer />

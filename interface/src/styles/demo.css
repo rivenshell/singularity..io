@@ -149,10 +149,10 @@ label {
     padding: 0px;
    
 }
-.upsign
+/* .upsign
 {
     background-color: #090909;
-}
+} */
 .modal-header
 { background-image: linear-gradient(to right, #0b0b0b, #0040ff);
     background-image: -o-linear-gradient(right, #0f0f10, #0040ff);
