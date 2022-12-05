@@ -185,7 +185,7 @@ const App = ({ classes }) => {
                     </div>
                 }
             </div>
-            <div className='container-fluid'>
+            {/* <div className='container-fluid'>
             <div className='row'>
                 <div className="col-lg-4 col-md-4 img-wrapper">
                     <img className="img-fluid" src={bear}/>
@@ -206,7 +206,7 @@ const App = ({ classes }) => {
                     </div>
                 </div>
             </div>
-            </div>
+            </div> */}
     </div>
     )
 }

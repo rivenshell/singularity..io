@@ -31,7 +31,7 @@ const Layout = () => {
 						</Route>
 
                         </Routes>
-						
+					<Pics />
                     <Footer />
                         {/*
 						

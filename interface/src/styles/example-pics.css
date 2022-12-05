@@ -1,7 +1,7 @@
 .img-fluid{
     height: auto;
-    width: 70%;
-    margin-left: 8%;  
+    width: 60%;
+    margin-left: 20%;  
     display: block;
 }
 .img-wrapper{
@@ -16,14 +16,14 @@
   left: 0;
   right: 0;
   height: auto;
-  width: 70%;
+  width: 60%;
   opacity: 0;
   transition: .5s ease;
   background-color: linear-gradient(to right, #0b0b0b, #0040ff);
   background-color: -o-linear-gradient(right, #0f0f10, #0040ff);
   background-color: -moz-linear-gradient(right, #0c0c0c, #1f40a3);
   background-image: -webkit-linear-gradient(left, #131314, #1639a0);
-  margin-left: 8%;
+  margin-left: 20%;
 }
 .img-wrapper:hover .img-info {
   opacity: 1;
