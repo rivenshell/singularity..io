@@ -7,12 +7,19 @@ import {
 import { callDalleService } from "./backend_api";
 import GeneratedImageList from "./GeneratedImageList";
 import TextPromptInput from "./TextPromptInput";
-
 import "./App.css";
 import BackendUrlInput from "./BackendUrlInput";
 import LoadingSpinner from "./LoadingSpinner";
 import NotificationCheckbox from './NotificationCheckbox';
 import title from "../src/img/google.jpg"
+import robot from "../src/img/robot-dancing.jpg";
+import bear from "../src/img/teddy-bear.jpg";
+import mars from "../src/img/apocaliptic-mars.jpg";
+import "./styles/example-pics.css";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { app } from './firebase/FirebaseConfig'
+
+
 
 const useStyles = () => ({
     root: {
@@ -64,6 +71,18 @@ const useStyles = () => ({
 const NOTIFICATION_ICON = "https://camo.githubusercontent.com/95d3eed25e464b300d56e93644a26c8236a19e04572cf83a95c9d68f8126be83/68747470733a2f2f656d6f6a6970656469612d75732e73332e6475616c737461636b2e75732d776573742d312e616d617a6f6e6177732e636f6d2f7468756d62732f3234302f6170706c652f3238352f776f6d616e2d6172746973745f31663436392d323030642d31663361382e706e67";
 
 const App = ({ classes }) => {
+
+    const [userLogged, setUserLogged] = useState();
+  const auth = getAuth(app);
+
+  onAuthStateChanged(auth, (user)=>{
+    if (user){
+    //   console.log(user)
+      setUserLogged(user)
+    }
+  })
+  console.log("srtdrt",userLogged)
+
     const [backendUrl, setBackendUrl] = useState('');
     const [promptText, setPromptText] = useState('');
     const [isFetchingImgs, setIsFetchingImgs] = useState(false);
@@ -133,26 +152,7 @@ const App = ({ classes }) => {
             <div className={classes.title}>
 
                 <img className="cover" src={title} />
-
-
-                <Typography variant="h3">
-                 Singularity
-                </Typography>
-                <Typography variant="p">
-                A playground for DALL-E enthusiasts to tinker with the open-source version 
-                </Typography>
-
-                <Typography>
-                of OpenAI's DALL-E, based on DALL-E Mini.
-                </Typography>
-
             </div>
-
-            {!validBackendUrl && <div>
-                <Typography variant="body1" color="textSecondary">
-                    Put your DALL-E backend URL to start
-                </Typography>
-            </div>}
 
             <div className={classes.playgroundSection}>
                 <div className={classes.settingsSection}>
@@ -200,7 +200,29 @@ const App = ({ classes }) => {
                     </div>
                 }
             </div>
-        </div>
+            <div className='container-fluid'>
+            <div className='row'>
+                <div className="col-lg-4 col-md-4 img-wrapper">
+                    <img className="img-fluid" src={bear}/>
+                    <div className="img-info">
+                        <p>A photo of a teddy bear on a skateboard in Times Square</p>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-4 img-wrapper">
+                    <img className="img-fluid" src={mars} />
+                    <div className="img-info">
+                        <p>Apocaliptic future in Mars</p>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-4 img-wrapper">
+                    <img className="img-fluid" src={robot}/>
+                    <div className="img-info">
+                        <p>A futuristic robot dancing in front of a mountain</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
     )
 }
 

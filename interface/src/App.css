@@ -9,9 +9,6 @@ body {
 #root {
     min-height: 100vh;
     background-color: white;
-
-
-    display: flex;
     flex-direction: row;
 
 }
@@ -19,7 +16,7 @@ body {
 display: block;
 margin-left: auto;
 margin-right: auto;
-width: 33%;
+width: 53%;
 margin-top: 1%;
 };
 

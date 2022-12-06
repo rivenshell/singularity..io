@@ -12,6 +12,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+			loggedin: [
 			]
 		},
 		actions: {
@@ -37,6 +39,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			userLogged: (user) => {
+				const store = getStore();
+				setStore({ loggedin: user });
+				console.log("current user", store.loggedin)
 			}
 		}
 	};

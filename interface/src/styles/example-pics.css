@@ -1,0 +1,42 @@
+.img-fluid{
+    height: auto;
+    width: 60%;
+    margin-left: 20%;  
+    display: block;
+}
+.img-wrapper{
+  position: relative;
+  overflow: hidden;
+}
+
+.img-info{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 60%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: linear-gradient(to right, #0b0b0b, #0040ff);
+  background-color: -o-linear-gradient(right, #0f0f10, #0040ff);
+  background-color: -moz-linear-gradient(right, #0c0c0c, #1f40a3);
+  background-image: -webkit-linear-gradient(left, #131314, #1639a0);
+  margin-left: 20%;
+}
+.img-wrapper:hover .img-info {
+  opacity: 1;
+}
+.img-info p{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Orbitron';
+}
