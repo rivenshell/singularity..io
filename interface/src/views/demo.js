@@ -5,8 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../styles/demo.css";
 import { app } from "../firebase/FirebaseConfig";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
 
 
@@ -20,6 +19,12 @@ export const Demo = () => {
 
 
   const auth = getAuth(app);
+
+  onAuthStateChanged(auth, (user)=>{
+    if (user){
+      console.log(user)
+    }
+  })
 
   function createAccount(auth, email, password) {
    if (password === confirmPassword){

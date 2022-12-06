@@ -2,8 +2,10 @@ import React, { useState, useEffect, useContext } from "react";
 import { app } from "../firebase/FirebaseConfig";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link, Navigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 const Signup = () => {
+    const { store, actions } = useContext(Context);
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const [confirmPassword, setConfirmPassword] = useState()
@@ -12,6 +14,7 @@ const Signup = () => {
 
 
     const auth = getAuth(app);
+    console.log(store.loggedin)
 
     function createAccount(auth, email, password) {
         if (password === confirmPassword) {
@@ -20,8 +23,11 @@ const Signup = () => {
                     // Signed in 
                     const user = userCredential.user;
                     setIsLogged(user)
-                    console.log(user)
+                    console.log('EWFGRG')
+                    
+				    console.log(typeof user);
                     // ...
+                    actions.userLogged(user)
 
                 })
         } else {
