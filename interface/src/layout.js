@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App.js";
 import { Demo } from "./views/demo";
 import Signup from "./views/signup";
+import Aboutus from "./views/aboutus";
 //import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -28,6 +29,8 @@ const Layout = () => {
 						<Route exact path="/demo" element={ <Demo />}>
 						</Route>
 						<Route exact path="/signup" element={ <Signup />}>
+						</Route>
+						<Route exact path="/aboutus" element={ <Aboutus />}>
 						</Route>
 
                         </Routes>

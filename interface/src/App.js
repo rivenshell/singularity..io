@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
     Card, CardContent, FormControl, FormHelperText,
@@ -148,7 +149,9 @@ const App = ({ classes }) => {
     return (
        
        <div className={classes.root}>
-            
+             <Link to="/aboutus">
+						<button className="btn about">About us</button>
+					</Link>
             <div className={classes.title}>
 
                 <img className="cover" src={title} />
@@ -222,6 +225,7 @@ const App = ({ classes }) => {
                 </div>
             </div>
             </div>
+            
     </div>
     )
 }
