@@ -178,3 +178,29 @@ label {
     background-blend-mode: multiply;
     color: white;
 }
+
+#username {
+    background-color: #090909;
+    border: none;
+    border-bottom: 2px solid #0b0b0b;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: white;
+}
+
+#wordpass {
+    background-color: #0f0e0e;
+    border: none;
+    border-bottom: 2px solid #0f0f0f;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color: white;
+}

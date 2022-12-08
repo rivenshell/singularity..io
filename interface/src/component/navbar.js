@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , Navigate} from "react-router-dom";
 import blue from "../img/singluarity.jpg";
 import "../styles/navbar.css";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
@@ -36,14 +36,13 @@ function signOutUser(){
 				<div className="d-flex" role="search">
 
 				{ ! signedIn && <Link to="/demo">
-						<button className="btn nav-login">Login</button>
+						<button className="btn me-3 nav-login">Login</button>
 					</Link>}
 
-					<Link to="/sign">
-						<button className="btn nav-login">signup</button>
+					<Link to="/signup">
+						<button className="btn me-3 nav-login" id="btn-2">Signup</button>
 					</Link>
-					{signedIn && <button onClick={signOutUser}>SIGN OUT</button>}
-
+					{signedIn && <button className="btn me-3 nav-login" onClick={signOutUser}>Sign Out</button>}
 
 				</div>
 			</div>

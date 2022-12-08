@@ -1,12 +1,13 @@
 .img-fluid{
     height: auto;
-    width: 60%;
+    width: 55%;
     margin-left: 20%;  
     display: block;
 }
 .img-wrapper{
   position: relative;
   overflow: hidden;
+  margin-top: 3%;
 }
 
 .img-info{
@@ -16,7 +17,7 @@
   left: 0;
   right: 0;
   height: auto;
-  width: 60%;
+  width: 55%;
   opacity: 0;
   transition: .5s ease;
   background-color: linear-gradient(to right, #0b0b0b, #0040ff);

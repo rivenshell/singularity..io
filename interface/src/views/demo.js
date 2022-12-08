@@ -5,16 +5,13 @@ import { Context } from "../store/appContext";
 
 import "../styles/demo.css";
 import { app } from "../firebase/FirebaseConfig";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
 
 
 export const Demo = () => {
   const { store, actions } = useContext(Context);
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
-  const [confirmPassword, setConfirmPassword] = useState()
-  const [passwordError, setPasswordError] = useState(false)
+ 
   const [islogged, setIsLogged] = useState(null)
 
 
@@ -26,21 +23,6 @@ export const Demo = () => {
     }
   })
 
-  function createAccount(auth, email, password) {
-   if (password === confirmPassword){
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      setIsLogged(user)
-      console.log(user)
-      // ...
-
-    })
-   }else{
-    setPasswordError(true)
-   }
-  }
 
   return (
     <div className="container">
@@ -70,40 +52,12 @@ export const Demo = () => {
                   <div class="col-lg-12 loginbttm">
                     <div class="col-lg-6 login-btm login-button">
 
-                      <button type="button" data-backdrop="false"  class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        SIGN UP </button>
-
-
-                      {/* Sign Up Function */}
-                      <div class="upsign modal" id="exampleModal" data-backdrop="false"  tabindex="-1" aria-labelledby="exampleModalLabel">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Create Account</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            {passwordError && <div>Password is not the same</div>}
-                            <div class="modal-body">
-                              <label for="username">Username*</label> <br></br>
-                              <input type="email" id="username" name="username" onChange={(e) => setEmail(e.target.value)} value={email} /> <br></br>
-                              <label for="wordpass">Password*</label> <br></br>
-                              <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} id="wordpass" name="wordpass" /><br></br>
-                              <label for="username">Confirm Password*</label> <br></br>
-                              <input type="password" id="username" name="confirmPassword" onChange={(e) => setConfirmPassword(e.target.value)} />
-                            </div>
-
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary" onClick={() => createAccount(auth, email, password)}>Sign Up</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      
                       {/* Sign Up Function */}
                       { islogged && <Navigate to="/" />  }
 
                       &nbsp;&nbsp;
-                      <button type="submit" class="btn btn-outline-primary">Login</button>
+                      <button type="submit" class="btn btn-outline-primary">Login!</button>
 
 
                     </div>
@@ -115,10 +69,7 @@ export const Demo = () => {
           </div>
         </div>
       </div>
-      {/* <br />
-			<Link to="/">
-				<button className="home btn btn-primary">Back home</button>
-			</Link> */}
+     
     </div>
   );
 };
