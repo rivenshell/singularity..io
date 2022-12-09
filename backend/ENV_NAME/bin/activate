@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/riv/Desktop/git/singularity..io/backend/ENV_NAME"
+VIRTUAL_ENV="/Volumes/_darth/_code/_projects/singularity..io/backend/ENV_NAME"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/riv/Desktop/git/singularity..io/backend/ENV_NAME"
+setenv VIRTUAL_ENV "/Volumes/_darth/_code/_projects/singularity..io/backend/ENV_NAME"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

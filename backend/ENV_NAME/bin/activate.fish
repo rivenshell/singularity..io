@@ -30,7 +30,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/riv/Desktop/git/singularity..io/backend/ENV_NAME"
+set -gx VIRTUAL_ENV "/Volumes/_darth/_code/_projects/singularity..io/backend/ENV_NAME"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
