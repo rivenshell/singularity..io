@@ -12,10 +12,7 @@ const Signup = () => {
     const [confirmPassword, setConfirmPassword] = useState()
     const [passwordError, setPasswordError] = useState(false)
     const [islogged, setIsLogged] = useState(null)
-
-
     const auth = getAuth(app);
-    console.log(store.loggedin)
 
     function createAccount(auth, email, password) {
         if (password === confirmPassword) {
@@ -28,7 +25,7 @@ const Signup = () => {
                     
 				    console.log(typeof user);
                     // ...
-                    actions.userLogged(user)
+                    // actions.userLogged(user)
 
                 })
         } else {

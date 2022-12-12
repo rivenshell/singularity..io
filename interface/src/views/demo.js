@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, Navigate } from "react-router-dom";
-
 import { Context } from "../store/appContext";
-
 import "../styles/demo.css";
 import { app } from "../firebase/FirebaseConfig";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
@@ -11,10 +9,10 @@ import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebas
 
 export const Demo = () => {
   const { store, actions } = useContext(Context);
- 
   const [islogged, setIsLogged] = useState(null)
-
-
+  const [logEmail, setLogEmail] = useState()
+  const [logPassword, setLogPassword] = useState()
+  const [passwordError, setPasswordError] = useState(false)
   const auth = getAuth(app);
 
   onAuthStateChanged(auth, (user)=>{
@@ -22,7 +20,19 @@ export const Demo = () => {
       console.log(user)
     }
   })
-
+  
+  function logIn (auth, logEmail, logPassword){
+  signInWithEmailAndPassword(auth, logEmail, logPassword)
+  .then((userCredential) => {
+      const user = userCredential.user;
+      setIsLogged(user)
+      console.log(user);
+      // alert('Successfully signed in')
+  })
+  .catch((error) => {
+    alert("Wrong Info")
+  });
+}
 
   return (
     <div className="container">
@@ -42,26 +52,22 @@ export const Demo = () => {
                 <form>
                   <div class="form-group">
                     <label class="form-control-label">USERNAME</label>
-                    <input type="text" class="form-control" id="user" />
+                    <input type="text" class="form-control" id="user" onChange={(e) => setLogEmail(e.target.value)} value={logEmail}/>
                   </div>
                   <div class="form-group">
                     <label class="form-control-label">PASSWORD</label>
-                    <input type="password" class="form-control" id="password" />
+                    <input type="password" class="form-control" id="password" onChange={(e) => setLogPassword(e.target.value)} value={logPassword} />
                   </div>
 
                   <div class="col-lg-12 loginbttm">
                     <div class="col-lg-6 login-btm login-button">
-
-                      
-                      {/* Sign Up Function */}
-                      { islogged && <Navigate to="/" />  }
-
                       &nbsp;&nbsp;
-                      <button type="submit" class="btn btn-outline-primary">Login!</button>
-
+                      <button type="button" class="btn btn-outline-primary" onClick={() => logIn(auth, logEmail, logPassword)}>Login!</button>
 
                     </div>
                   </div>
+
+                  { islogged && <Navigate to="/" />  }
                 </form>
               </div>
             </div>

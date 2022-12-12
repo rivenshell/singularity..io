@@ -40,11 +40,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
-			userLogged: (user) => {
-				const store = getStore();
-				setStore({ loggedin: user });
-				console.log("current user", store.loggedin)
-			}
+			// userLogged: (user) => {
+			// 	const store = getStore();
+			// 	setStore({ loggedin: user });
+			// 	console.log("current user", store.loggedin)
+			// }
 		}
 	};
 };
