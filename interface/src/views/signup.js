@@ -1,37 +1,25 @@
-import React, { useState, useEffect, useContext } from "react";
-import { app } from "../firebase/FirebaseConfig";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { Link, Navigate } from "react-router-dom";
+import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 import "../styles/demo.css";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-    const { store, actions } = useContext(Context);
+    const { actions } = useContext(Context);
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const [confirmPassword, setConfirmPassword] = useState()
     const [passwordError, setPasswordError] = useState(false)
-    const [islogged, setIsLogged] = useState(null)
-    const auth = getAuth(app);
+    const navigate = useNavigate();
 
-    function createAccount(auth, email, password) {
+    const userSignup = (email, password) =>{
         if (password === confirmPassword) {
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in 
-                    const user = userCredential.user;
-                    setIsLogged(user)
-                    console.log('EWFGRG')
-                    
-				    console.log(typeof user);
-                    // ...
-                    // actions.userLogged(user)
-
-                })
-        } else {
+		actions.userSignup(email, password)
+		navigate("/");
+        }
+        else {
             setPasswordError(true)
         }
-    }
+	}
 
     return (
         <div className="container">
@@ -41,7 +29,7 @@ const Signup = () => {
                     <div class="col-lg-3 col-md-2"></div>   
                     <div class="col-lg-6 col-md-8 login-box">
                     <div class="col-lg-12 login-key">
-                    <i class="fa fa-key" aria-hidden="true"></i>
+                    {/* <i class="fa fa-key" aria-hidden="true"></i> */}
                     </div>
                         <div class="col-lg-12 login-title">
                         SIGNUP
@@ -65,13 +53,10 @@ const Signup = () => {
 
                             <div class="col-lg-12 loginbttm">
                                 <div class="col-lg-6 login-btm login-button">
-                                    <button type="button" className="btn btn-outline-primary" onClick={() => createAccount(auth, email, password)}>Sign Up</button>
+                                    <button type="button" className="btn btn-outline-primary" onClick={() => userSignup(email, password)}>Sign Up</button>
                                 </div>
                             </div>
 
-
-
-            {islogged && <Navigate to="/" />}
                             </form>
                             </div>
                         </div>

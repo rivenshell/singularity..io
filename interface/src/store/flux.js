@@ -1,52 +1,86 @@
+import { app } from '../firebase/FirebaseConfig'
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+
+const auth = getAuth(app);
+
 const getState = ({ getStore, getActions, setStore }) => {
-	return {
-		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
-			loggedin: [
-			]
-		},
-		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+  return {
+    store: {
+      currentUser: [],
+    },
+    actions: {
+      // Use getActions to call a function within a fuction
+      exampleFunction: () => {
+        getActions().changeColor(0, "green");
+      },
+      loadSomeData: () => {
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            const email = user.email;
+            console.log("Current User", email);
+            const currentUser = {
+              email: email,
+            };
+            setStore({ currentUser: currentUser });
+            // ...
+          } else {
+            // User is signed out
+            // ...
+          }
+        });
+      },
+      userLogin: (email, password) => {
+        //get the store
+        const store = getStore();
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log("Sign In Successful", user);
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+          });
+      },
+      userSignup: (email, password) => {
+        //get the store
+        const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+        createUserWithEmailAndPassword(auth, email, password).then(
+          (userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            // setUser;
+            console.log("Sign up successful", user);
+            // ...
+          }
+        );
+      },
+      userLogout: () => {
+        //get the store
+        const store = getStore();
 
-				//reset the global store
-				setStore({ demo: demo });
-			},
-			// userLogged: (user) => {
-			// 	const store = getStore();
-			// 	setStore({ loggedin: user });
-			// 	console.log("current user", store.loggedin)
-			// }
-		}
-	};
+        signOut(auth)
+          .then(() => {
+            // Sign-out successful.
+            console.log("Sign-out successful");
+          })
+          .catch((error) => {
+            // An error happened.
+          });
+      },
+    },
+  };
 };
 
 export default getState;

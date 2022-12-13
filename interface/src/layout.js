@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App.js";
-import { Demo } from "./views/demo";
+import { Login } from "./views/login";
 import Signup from "./views/signup";
 import Aboutus from "./views/aboutus";
 //import { Single } from "./views/single";
@@ -26,7 +26,7 @@ const Layout = () => {
 					<Routes>
 						<Route exact path="/" element={ <App /> }>
 						</Route>
-						<Route exact path="/demo" element={ <Demo />}>
+						<Route exact path="/login" element={ <Login />}>
 						</Route>
 						<Route exact path="/signup" element={ <Signup />}>
 						</Route>
