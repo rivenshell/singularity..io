@@ -21,3 +21,32 @@ margin-top: 1%;
 };
 
 /* Commit */
+
+#prompt-input {
+    width: 100%;
+    border: 3px solid #040404;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: white;
+    background-image: linear-gradient(to right, #0B0B0B, #0040FF);
+    background-image: -o-linear-gradient(right, #0F0F10, #0040FF);
+    background-image: -moz-linear-gradient(right, #0C0C0C, #1F40A3);
+    background-image: -webkit-linear-gradient(left, #131314, #1639A0);
+    background-blend-mode: multiply;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
