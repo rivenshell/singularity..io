@@ -161,24 +161,23 @@ const App = ({ classes }) => {
                 <div className={classes.settingsSection}>
                     <Card className={classes.searchQueryCard}>
                         <CardContent>
-                            <BackendUrlInput setBackendValidUrl={setBackendUrl}
+                            {/* <BackendUrlInput setBackendValidUrl={setBackendUrl}
                                 isValidBackendEndpoint={isValidBackendEndpoint}
                                 setIsValidBackendEndpoint={setIsValidBackendEndpoint}
                                 setIsCheckingBackendEndpoint={setIsCheckingBackendEndpoint}
                                 isCheckingBackendEndpoint={isCheckingBackendEndpoint}
-                                disabled={isFetchingImgs} />
+                                disabled={isFetchingImgs} /> */}
 
-                            <TextPromptInput enterPressedCallback={enterPressedCallback} promptText={promptText} setPromptText={setPromptText}
-                                disabled={isFetchingImgs || !validBackendUrl} />
+                            <TextPromptInput/>
 
-                            <NotificationCheckbox isNotificationOn={notificationsOn} setNotifications={setNotificationsOn}/>
+                            {/* <NotificationCheckbox isNotificationOn={notificationsOn} setNotifications={setNotificationsOn}/> */}
 
                             <FormControl className={classes.imagesPerQueryControl}
                                 variant="outlined">
                                 <InputLabel id="images-per-query-label">
                                     Images to generate
                                 </InputLabel>
-                                <Select labelId="images-per-query-label"
+                                {/* <Select labelId="images-per-query-label"
                                     label="Images per text prompt" value={imagesPerQuery}
                                     disabled={isFetchingImgs}
                                     onChange={(event) => setImagesPerQuery(event.target.value)}>
@@ -187,7 +186,7 @@ const App = ({ classes }) => {
                                             {num + 1}
                                         </MenuItem>
                                     })}
-                                </Select>
+                                </Select> */}
                                 <FormHelperText>More images = More time to generate</FormHelperText>
                             </FormControl>
                         </CardContent>

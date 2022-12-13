@@ -1,11 +1,13 @@
 import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { TextField } from "@material-ui/core";
+import "./App.css";
 
 const useStyles = () => ({
     inputPrompt: {
         marginTop: '20px',
     },
+    
 })
 
 const TextPromptInput = ({ classes, enterPressedCallback, disabled, promptText, setPromptText }) => {
