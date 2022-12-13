@@ -3,67 +3,37 @@ import { app } from "../firebase/FirebaseConfig";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link, Navigate } from "react-router-dom";
 import { Context } from "../store/appContext";
+import christian from "../img/christian.jpg";
+import riven from "../img/rivenshell.jpg";
+import chris from "../img/chris.jpg";
 import "../styles/aboutus.css";
 
 const Aboutus = () => {
-    const { store, actions } = useContext(Context);
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
-    const [confirmPassword, setConfirmPassword] = useState()
-    const [passwordError, setPasswordError] = useState(false)
-    const [islogged, setIsLogged] = useState(null)
+  const { store, actions } = useContext(Context);
 
+  return (
+    <div>
+      <div className="description">
+        <h3 className="title">What is Our Website?</h3>
+        <p1>We’ve trained a neural network called DALL·E that creates images from text captions for a wide range of concepts expressible in natural language.</p1>
+      </div>
 
-    const auth = getAuth(app);
-    console.log(store.loggedin)
+      <div className="crew">
+        <h5>The Creative Crew</h5>
 
-    function createAccount(auth, email, password) {
-        if (password === confirmPassword) {
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in 
-                    const user = userCredential.user;
-                    setIsLogged(user)
-                    console.log('EWFGRG')
-                    
-				    console.log(typeof user);
-                    // ...
-                    actions.userLogged(user)
+        <div class="grid">
 
-                })
-        } else {
-            setPasswordError(true)
-        }
-    }
-
-    return (
-        <div>
-      
-      
-        <div class="title">
-        <h5>What is our Website?</h5>
+          <img src={christian} class="img-thumbnail"></img>
+          <img src={riven} class="img-thumbnail"></img>
+          <img src={chris} class="img-thumbnail"></img>
         </div>
-        <div class="content">
-           
-            <p>We’ve trained a neural network called DALL·E that creates images from text captions for a wide range of concepts expressible in natural language.</p>
-        </div>
-   
-        <h3>The Creative Crew</h3>
-    
-   
-    <div class="row align-items-center">
-    <div class="col">
-      One of three columns
+      </div>
+
+
     </div>
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-  </div>
-        </div>
-    )
+
+
+  )
 }
 
 export default Aboutus

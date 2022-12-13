@@ -7,3 +7,48 @@
     color: white;
   
 }
+
+.grid{ 
+
+  /* display: flex;
+    grid-gap: 2%;
+    align-items: stretch;
+    width: 10%;
+    height: 10%; */
+
+    display: flex;
+    width: 200px;
+    /* position: absolute; */
+    /* top: 50%; */
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-transform: none;
+
+    }
+
+  h5{
+
+        border: 2px solid #fff;
+        display: inline-block;
+        font-size: .8em;
+        font-weight: 700;
+        letter-spacing: .1em;
+        margin: 0 auto;
+        padding: 10px 30px;
+        text-transform: uppercase;
+     
+    
+  }
+  .title{
+    font-weight: 300;
+	line-height: 120%;
+	margin: 20px 0;
+	text-shadow: 0 1px 5px rgba(0,0,0,.8);
+	text-transform: uppercase;
+    text-align: center;
+  }
+.crew{
+  padding-top: 29%;
+  text-align: center;
+}
+  
