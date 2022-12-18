@@ -156,52 +156,8 @@ const App = ({ classes }) => {
 
                 <img className="cover" src={title} />
             </div>
+            {/* Searchbar here */}
 
-            <div className={classes.playgroundSection}>
-                <div className={classes.settingsSection}>
-                    <Card className={classes.searchQueryCard}>
-                        <CardContent>
-                            {/* <BackendUrlInput setBackendValidUrl={setBackendUrl}
-                                isValidBackendEndpoint={isValidBackendEndpoint}
-                                setIsValidBackendEndpoint={setIsValidBackendEndpoint}
-                                setIsCheckingBackendEndpoint={setIsCheckingBackendEndpoint}
-                                isCheckingBackendEndpoint={isCheckingBackendEndpoint}
-                                disabled={isFetchingImgs} /> */}
-
-                            <TextPromptInput/>
-
-                            {/* <NotificationCheckbox isNotificationOn={notificationsOn} setNotifications={setNotificationsOn}/> */}
-
-                            <FormControl className={classes.imagesPerQueryControl}
-                                variant="outlined">
-                                <InputLabel id="images-per-query-label">
-                                    Images to generate
-                                </InputLabel>
-                                {/* <Select labelId="images-per-query-label"
-                                    label="Images per text prompt" value={imagesPerQuery}
-                                    disabled={isFetchingImgs}
-                                    onChange={(event) => setImagesPerQuery(event.target.value)}>
-                                    {Array.from(Array(imagesPerQueryOptions).keys()).map((num) => {
-                                        return <MenuItem key={num + 1} value={num + 1}>
-                                            {num + 1}
-                                        </MenuItem>
-                                    })}
-                                </Select> */}
-                                <FormHelperText>More images = More time to generate</FormHelperText>
-                            </FormControl>
-                        </CardContent>
-                    </Card>
-                    {queryTime !== 0 && <Typography variant="body2" color="textSecondary">
-                        Generation execution time: {queryTime} sec
-                    </Typography>}
-                </div>
-                
-                {(generatedImages.length > 0 || apiError || isFetchingImgs) &&
-                    <div className={classes.gallery}>
-                        {getGalleryContent()}
-                    </div>
-                }
-            </div>
             <div className='container-fluid'>
             <div className='row'>
                 <div className="col-lg-4 col-md-4 img-wrapper">
