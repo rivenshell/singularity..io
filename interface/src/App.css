@@ -1,3 +1,8 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
 html {
     height: 100%;
 }
@@ -39,9 +44,10 @@ margin-top: 1%;
   }
 
 
-
-
-
+mainbox {
+    padding: 20px 10px;
+    background-color: #0040FF;
+}
 
 
 
