@@ -50,6 +50,21 @@ mainbox {
 }
 
 
+#input-box1 {
+    margin: auto;
+    margin-left: 600px;
+}
+
+#button-addon2 {
+    margin: auto;
+    margin-right: 600px;
+}
+
+form-control {
+    margin: auto;
+    width: auto;
+
+}
 
 
 

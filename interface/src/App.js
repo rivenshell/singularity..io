@@ -157,6 +157,10 @@ const App = ({ classes }) => {
                 <img className="cover" src={title} />
             </div>
             {/* Searchbar here */}
+            <div id='input-box' class="input-group mb-3">
+                 <input id='input-box1' type="text" class="form-control" placeholder="Search Billions of AI Generated Images" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            </div>
 
             <div className='container-fluid'>
             <div className='row'>
