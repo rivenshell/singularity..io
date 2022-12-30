@@ -3,6 +3,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.2",
     "firebase": "^9.14.0",
+    "openai": "^3.1.0",
     "react-router-dom": "^6.4.5"
   },
   "scripts": {
@@ -10,5 +11,20 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.2.4"
-  }
+  },
+  "name": "singularity..io-3",
+  "description": "<p align=\"center\">",
+  "version": "1.0.0",
+  "main": "generate.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rivenshell/singularity..io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rivenshell/singularity..io/issues"
+  },
+  "homepage": "https://github.com/rivenshell/singularity..io#readme"
 }
